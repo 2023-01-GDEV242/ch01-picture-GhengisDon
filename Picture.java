@@ -15,6 +15,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person user;
+    private Person opponent;
     private boolean drawn;
 
     /**
@@ -26,6 +28,8 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        user = new Person();
+        opponent = new Person();
         drawn = false;
     }
 
@@ -56,6 +60,16 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            user.changeColor("Green");
+            user.moveHorizontal(-220);
+            user.moveVertical(40);
+            user.changeSize(120,80);
+            user.makeVisible();
+            
+            opponent.changeColor("Red");
+            opponent.makeVisible();
+            
             drawn = true;
         }
     }
